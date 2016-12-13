@@ -21,9 +21,6 @@
       "phpcs --standard=PSR2 --extensions=php --colors src/"
     ]
   },
-  "bin": [
-    "bin/package-release"
-  ],
   "autoload": {
     "psr-4": {
       "silverorange\\DevTest\\" : "src/"
