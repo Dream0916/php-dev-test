@@ -1,0 +1,32 @@
+{
+  "name": "silverorange/dev_test",
+  "description": "You're a great developer. Show us your stuff!",
+  "type": "library",
+  "homepage": "https://github.com/silverorange/dev_test",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Michael Gauthier",
+      "email": "mike@silverorange.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^2.6.0"
+  },
+  "scripts": {
+    "lint": [
+      "phpcs --standard=PSR2 --extensions=php --colors src/"
+    ]
+  },
+  "bin": [
+    "bin/package-release"
+  ],
+  "autoload": {
+    "psr-4": {
+      "silverorange\\DevTest\\" : "src/"
+    }
+  }
+}
