@@ -4,6 +4,8 @@ silverorange Developer Assessment
 This is a small set of tasks to assess your skill at developing PHP
 applications that talk to a database.
 
+Tasks
+-----
 Provided basic PDO framework with some data fixtures for authors posts:
 
  1. Create an importer that imports a list of post files (examples are provided
@@ -24,17 +26,25 @@ The HTML rendering script does not have to be a web server—you can just dump
 HTML to STDOUT. If you want to use PHP's built-in server (`php -S`) or an
 existing web framework, that is acceptable.
 
+Coding Standard
+---------------
 Please use [PSR-2 and PSR-4](http://www.php-fig.org/psr/) for your code. The
 [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer) tool can be used to check
-your code. Please use the [Composer](https://getcomposer.org/) tool for
-dependency management. You can use any 3rd-party libraries as necessary or
-as desired in order to achieve the tasks.
+your code.
 
 The project is set up to lint your code using:
 ```
 composer run lint
 ```
 
+Dependencies
+------------
+Pease use the [Composer](https://getcomposer.org/) tool for dependency
+management. You can use any 3rd-party libraries as necessary or as desired in
+order to achieve the tasks.
+
+Commits
+-------
 Your commit history is important to us! Try to make meaningful commit messages
 that show your progress.
 
