@@ -1,0 +1,15 @@
+version: "3"
+services:
+  db:
+    container_name: silverorange_postgres
+    image: postgres:14
+    ports:
+      - 5532:5432
+    environment:
+      POSTGRES_USER: "silverorange"
+      POSTGRES_PASSWORD: "silverorange"
+      POSTGRES_DB: "silverorange"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+volumes:
+  db-data:
