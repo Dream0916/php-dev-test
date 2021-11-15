@@ -94,5 +94,5 @@ docker compose down --volumes
 docker compose up --detach
 ```
 
-For other databases, the provided SQL sources may need modification. You may
+For other databases, the provided SQL sources in the `sql/` folder may need modification. You may
 use Docker Compose or any other method of running a local database.
