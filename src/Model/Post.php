@@ -1,6 +1,6 @@
 <?php
 
-namespace silverorange\Dev\Test\Model;
+namespace silverorange\DevTest\Model;
 
 class Post
 {

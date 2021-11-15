@@ -19,6 +19,9 @@
   "scripts": {
     "lint": [
       "phpcs --standard=PSR12 --extensions=php --colors src/"
+    ],
+    "start": [
+      "php -S localhost:8000 src/index.php"
     ]
   },
   "autoload": {

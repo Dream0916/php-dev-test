@@ -36,6 +36,8 @@ existing web framework, that is acceptable.
 
 You may use any
 [currently supported version of PHP](https://www.php.net/supported-versions.php).
+You may use Docker Compose to get a local database running, but it is not
+required.
 
 ## Coding Standard
 
@@ -45,7 +47,7 @@ your code.
 
 The project is set up to lint your code using:
 
-```
+```sh
 composer run lint
 ```
 
@@ -61,7 +63,24 @@ Your commit history is important to us! Try to make meaningful commit messages
 that show your progress. Remember to not include your name or any other
 self-identifying information in your commit messages.
 
-## Database
+## Getting Started with the PHP Application
+
+Provided is an extremely basic PHP framework. **You may use this to get started
+or my install any other framework in which you may be more comfortable**. The
+provided framework runs using PHP’s built-in web server using using the command:
+
+```sh
+composer run start
+```
+
+The framework is simple:
+
+- `Template/` - these classes contain a `render()` method that takes a context object and returns a string of HTML.
+- `App.php` - this is the main class that runs the framework. The `run()` method creates a context object and a template object based on the current request. It renders the template and sends the content as a response.
+- `App::getTemplate()` - this method lets you pick a template based on the current request path.
+- `App::getContext()` - this method can be customized to build a request context object. It could contain URL identifiers or other required objects or request data.
+
+## Getting Started with the Database
 
 You may use MySQL, MariaDB, PostgreSQL, or SQLite for this exercise.
 

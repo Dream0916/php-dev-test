@@ -12,7 +12,7 @@ class DB
         $this->setDSN($dsn);
     }
 
-    public function setDSN($dsn)
+    public function setDSN($dsn): void
     {
         if ($this->dsn !== $dsn) {
             $this->dsn = $dsn;
@@ -20,7 +20,7 @@ class DB
         }
     }
 
-    public function getConnection()
+    public function getConnection(): \PDO
     {
         if (!$this->pdo instanceof \PDO) {
             $this->pdo = new \PDO($this->dsn);
