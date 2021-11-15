@@ -1,11 +1,18 @@
 # silverorange Developer Assessment
 
-This is a small set of tasks to assess your skill at developing PHP
-applications that talk to a database.
+This exercise is designed to assess how you approach tasks required in your
+position as an intermediate PHP developer at silverorange. We are interested to
+see how you work as well, as what your final results are; include useful Git
+commit messages and comments where you think your code may be unclear.
+
+Please do not include your name or any other self-identifying information in
+code or commit messages as silverorange will anonymize your work before
+reviewing.
 
 ## Tasks
 
-Provided basic PDO framework with some data fixtures for authors posts:
+Using the basic PDO framework, and data fixtures for authors and posts that are
+provided:
 
 1.  Create an importer that imports a list of post files (examples are provided
     in the `data` folder) into the database.
@@ -24,6 +31,11 @@ replace it as you see fit.
 The HTML rendering script does not have to be a web server—you can just dump
 HTML to STDOUT. If you want to use PHP's built-in server (`php -S`) or an
 existing web framework, that is acceptable.
+
+## Environment
+
+You may use any
+[currently supported version of PHP](https://www.php.net/supported-versions.php).
 
 ## Coding Standard
 
@@ -46,7 +58,8 @@ order to achieve the tasks.
 ## Commits
 
 Your commit history is important to us! Try to make meaningful commit messages
-that show your progress.
+that show your progress. Remember to not include your name or any other
+self-identifying information in your commit messages.
 
 ## Database
 
