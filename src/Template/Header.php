@@ -27,8 +27,8 @@ class Header implements Template
         <meta name="apple-mobile-web-app-capable" content="yes" />
     </head>
     <body>
+        <header class="header"></header>
         <main>
-            <div class="header"></div>
             <div class="container">
 HTML;
         // @codingStandardsIgnoreEnd
