@@ -2,7 +2,6 @@
 
 namespace silverorange\DevTest\Controller;
 
-use silverorange\DevTest\Database;
 use silverorange\DevTest\Context;
 use silverorange\DevTest\Template;
 
@@ -11,13 +10,13 @@ abstract class Controller
     protected $db;
     protected $params = [];
 
-    public function __construct(Database $db, array $params)
+    public function __construct(\PDO $db, array $params)
     {
         $this->setDatabase($db)->setParams($params);
         $this->loadData();
     }
 
-    public function setDatabase(Database $db): self
+    public function setDatabase(\PDO $db): self
     {
         $this->db = $db;
         return $this;

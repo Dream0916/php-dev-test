@@ -4,7 +4,9 @@ namespace silverorange\DevTest;
 
 class App
 {
-    public function __construct(Database $db)
+    protected $db;
+
+    public function __construct(\PDO $db)
     {
         $this->db = $db;
     }
