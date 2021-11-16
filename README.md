@@ -26,6 +26,8 @@ make changes fit with the existing visual page design:
    > preference at any time after you join.
 3. Add a picture of the product into the order summary. A high resolution image
    is provided in `highres-assets/product.jpg`.
+4. Add a submit button to the form. The button should have the title
+   _Place Order_.
 
 The template for the checkout page is in `src/Templates/Checkout.php`. The
 styles for the page are in `assets/index.css`.
