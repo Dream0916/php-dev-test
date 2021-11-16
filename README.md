@@ -1,4 +1,4 @@
-# silverorange Developer Assessment
+# silverorange PHP Developer Assessment
 
 This exercise is designed to assess how you approach tasks required in your
 position as an intermediate PHP developer at silverorange. We are interested to
