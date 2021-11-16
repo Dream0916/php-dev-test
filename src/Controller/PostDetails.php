@@ -35,7 +35,7 @@ class PostDetails extends Controller
 
     public function getStatus(): string
     {
-        if ($post === null) {
+        if ($this->post === null) {
             return $_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found';
         }
 
