@@ -2,22 +2,23 @@
 
 namespace silverorange\DevTest;
 
-class DB
+class Database
 {
     protected $pdo;
     protected $dsn;
 
-    public function __construct($dsn)
+    public function __construct(string $dsn)
     {
         $this->setDSN($dsn);
     }
 
-    public function setDSN($dsn): void
+    public function setDSN(string $dsn): self
     {
         if ($this->dsn !== $dsn) {
             $this->dsn = $dsn;
             $this->pdo = null;
         }
+        return $this;
     }
 
     public function getConnection(): \PDO

@@ -8,6 +8,11 @@ use silverorange\DevTest\Template\NotFound;
 
 class App
 {
+    public function __construct(Database $db)
+    {
+        $this->db = $db;
+    }
+
     public function run(): bool
     {
         $path = $_SERVER['REQUEST_URI'];
