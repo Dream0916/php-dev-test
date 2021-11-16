@@ -7,24 +7,14 @@ use silverorange\DevTest\Context;
 /**
  * Template for the checkout page
  */
-class Checkout implements Template
+class Checkout extends Layout
 {
-    protected $header;
-    protected $footer;
-
-    public function __construct()
-    {
-        $this->header = new Header();
-        $this->footer = new Footer();
-    }
-
-    public function render(Context $context): string
+    protected function renderPage(Context $context): string
     {
         $content = $this->header->render($context);
 
         // @codingStandardsIgnoreStart
-        $content .= <<<HTML
-
+        return <<<HTML
                 <form method="post" accept-charset="utf-8" action="checkout" class="form" novalidate="novalidate">
                     <div class="frame">
                         <h2 class="frame__title">Order Summary</h2>
@@ -115,11 +105,7 @@ class Checkout implements Template
                         </div>
                     </div>
                 </form>
-
 HTML;
         // @codingStandardsIgnoreEnd
-
-        $content .= $this->footer->render($context);
-        return $content;
     }
 }
