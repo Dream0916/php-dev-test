@@ -4,6 +4,9 @@ namespace silverorange\DevTest\Template;
 
 use silverorange\DevTest\Context;
 
+/**
+ * Template for the about page
+ */
 class About implements Template
 {
     protected $header;
