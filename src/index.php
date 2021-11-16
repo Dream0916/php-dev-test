@@ -7,5 +7,5 @@ require __DIR__ . '/../vendor/autoload.php';
 $config = new Config();
 $db = new Database($config->dsn);
 
-$app = new App();
+$app = new App($db);
 return $app->run();
