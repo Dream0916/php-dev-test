@@ -11,32 +11,57 @@ reviewing.
 
 ## Tasks
 
-Using the basic PDO framework, and data fixtures for authors and posts that are
-provided:
+### 1 — Update an Existing Page
 
-1.  Create an importer that imports a list of post files (examples are provided
-    in the `data` folder) into the database.
-2.  Create a tool that given a post id from the database, renders the post
-    content (title, body, author) as an HTML document.
-3.  Create a tool that renders all available posts in reverse chronological
-    order as an HTML document. Include the post title and author in the rendered
-    document.
+Using the provided basic web framework, make the following changes to the
+`/checkout` page. For this part of the exercise we are interested in HTML and
+CSS only—**no functionality is required**. No mockups are provided, so work to
+make changes fit with the existing visual page design:
 
-The post body is formatted as Markdown and the HTML should include the
-formatted Markdown.
+1. Change the multi-line _Street Address_ field into _Line 1_ and _Line 2_
+   fields. The _Line 2_ field should be optional.
+2. Add a check-mark and the following text below the _Order Summary_ section:
+   > With our “Rise & Shine” beta program, you get early access to new
+   > features, but they may not always work perfectly. You can change your beta
+   > preference at any time after you join.
+3. Add a picture of the product into the order summary. A high resolution image
+   is provided in `highres-assets/product.jpg`.
 
-The provided framework is a guideline and does not need to be used. Adapt it or
-replace it as you see fit.
+The template for the checkout page is in `src/Templates/Checkout.php`. The
+styles for the page are in `assets/index.css`.
 
-The HTML rendering script does not have to be a web server—you can just dump
-HTML to STDOUT. If you want to use PHP's built-in server (`php -S`) or an
-existing web framework, that is acceptable.
+### 2 — Database Access
+
+Using the same provided basic web framework, and data fixtures for authors and
+posts that are provided:
+
+1.  Write an importer in PHP that imports a list of post files (examples are
+    provided in the `data` folder) into the database.
+2.  Update `src/Controller/PostDetails.php` to load a published post from
+    the database with the specified id. Update the
+    `src/Template/PostDetails.php` template to render the post content
+    (title, body, author) as HTML. _The post body is formatted as Markdown and
+    the HTML should include the formatted Markdown_.
+3.  Update the `src/Controller/PostIndex.php` to load all published posts from
+    the database in reverse chronological order. Update the
+    `src/Template/PostIndex.php` template to render ths list as HTML. Include
+    the post titles and authors in the output. Make clicking a post go
+    to the post details.
+
+The provided basic web framework is a guideline—feel free to adapt it however
+you like to achieve the tasks above.
+
+**See below for instructions on how to run the test database**.
 
 ## Environment
 
 You may use any
 [currently supported version of PHP](https://www.php.net/supported-versions.php).
-You may use Docker Compose to get a local database running, but it is not
+If you are using macOS,
+[installing PHP via brew](https://formulae.brew.sh/formula/php) is recommended.
+The default PHP provided by macOS can only connect to MySQL.
+
+Docker Compose is an easy option to get a local database running, but it is not
 required.
 
 ## Coding Standard
@@ -60,25 +85,41 @@ order to achieve the tasks.
 ## Commits
 
 Your commit history is important to us! Try to make meaningful commit messages
-that show your progress. Remember to not include your name or any other
-self-identifying information in your commit messages.
+that show your progress. **Remember to not include your name or any other
+self-identifying information in your commit messages.**
 
 ## Getting Started with the PHP Application
 
-Provided is an extremely basic PHP framework. **You may use this to get started
-or my install any other framework in which you may be more comfortable**. The
-provided framework runs using PHP’s built-in web server using using the command:
+Provided is an extremely basic PHP web framework. The provided web framework
+runs using PHP’s built-in web server using using the command:
 
 ```sh
 composer run start
 ```
 
-The framework is simple:
+You can then access the application on port 8000. The following links can be
+used to test:
 
-- `Template/` - these classes contain a `render()` method that takes a context object and returns a string of HTML.
-- `App.php` - this is the main class that runs the framework. The `run()` method creates a context object and a template object based on the current request. It renders the template and sends the content as a response.
-- `App::getTemplate()` - this method lets you pick a template based on the current request path.
-- `App::getContext()` - this method can be customized to build a request context object. It could contain URL identifiers or other required objects or request data.
+- http://localhost:8000 - this will verify the application is running.
+- http://localhost:8000/checkout - the page to edit for part 1 of the exercise.
+- http://localhost:8000/posts - the posts index page.
+- http://localhost:8000/posts/6ec246b1-ad09-4e03-8573-21e2e779856c - this
+  should load a post once the posts are imported and the application is updated.
+- http://localhost:8000/asdfghjk - this should show a not-found page.
+
+Here is an overview of the files and folders that make up the framework:
+
+- `Controller/` - these classes are simple route controllers. They can load
+  data, set request-specific data in a context object, and pass it to templates.
+- `Template/` - these classes contain a `render()` method that takes a context
+  object and returns a string of HTML. The context object can contain
+  arbitrary data to pass to the template.
+- `Model/` - simple classes that could represent data from the database. You
+  may use these if you find them helpful.
+- `App.php` - this is the main class that runs the framework. The `run()`
+  method loads an appropriate controller for the current request. The
+  controller renders the template and the application sends the content as
+  HTTP response (aka it echos the content).
 
 ## Getting Started with the Database
 
@@ -91,8 +132,9 @@ Docker Compose configuration to run a local instance of PostgreSQL using:
 docker compose up --detach
 ```
 
-The Docker container has the following database properties:
+The Docker container is accessible externally using the following properties:
 
+- host: `localhost`
 - port: `5532`
 - database: `silverorange`
 - user: `silverorange`
@@ -113,5 +155,9 @@ docker compose down --volumes
 docker compose up --detach
 ```
 
-For other databases, the provided SQL sources in the `sql/` folder may need modification. You may
-use Docker Compose or any other method of running a local database.
+For other databases, the provided SQL sources in the `sql/` folder may need
+modification. You may use Docker Compose or any other method of running a local
+database.
+
+The DSN string in `src/Config.php` may need to be modified if you use a
+different database or do not use PostgreSQL with Docker Compose.
