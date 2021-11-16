@@ -17,7 +17,7 @@ class Header implements Template
 <html lang="en">
      <head>
         <meta charset="utf-8" />
-        <title>{$context->getTitle()} - My Site</title>
+        <title>{$context->title} - My Site</title>
         <link rel="stylesheet" type="text/css" href="/assets/index.css" />
         <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="/images/icon.svg" type="image/svg+xml">

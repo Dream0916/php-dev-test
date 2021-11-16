@@ -4,28 +4,15 @@ namespace silverorange\DevTest;
 
 class Context
 {
-    protected $title = '';
-    protected $post_id = '';
+    // TODO: You can add more properties to this class to pass values to templates
 
-    public function setTitle(string $title): self
-    {
-        $this->title = $title;
-        return $this;
-    }
+    /**
+     * @var string
+     */
+    public $title = '';
 
-    public function getTitle(): string
-    {
-        return $this->title;
-    }
-
-    public function setPostId(string $post_id): self
-    {
-        $this->post_id = $post_id;
-        return $this;
-    }
-
-    public function getPostId(): string
-    {
-        return $this->post_id;
-    }
+    /**
+     * @var string
+     */
+    public $content = '';
 }

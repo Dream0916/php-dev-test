@@ -4,14 +4,13 @@ namespace silverorange\DevTest\Template;
 
 use silverorange\DevTest\Context;
 
-class NotFound extends Layout
+class Root extends Layout
 {
     protected function renderPage(Context $context): string
     {
         // @codingStandardsIgnoreStart
         return <<<HTML
-                <h1>Sorry</h1>
-                <p>{$context->content}</p>
+<p>Things are up and running—you’ve got this!</p>
 HTML;
         // @codingStandardsIgnoreEnd
     }
