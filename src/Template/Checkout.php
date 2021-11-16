@@ -5,9 +5,9 @@ namespace silverorange\DevTest\Template;
 use silverorange\DevTest\Context;
 
 /**
- * Template for the about page
+ * Template for the checkout page
  */
-class About implements Template
+class Checkout implements Template
 {
     protected $header;
     protected $footer;

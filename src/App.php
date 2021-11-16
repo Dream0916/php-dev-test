@@ -3,7 +3,7 @@
 namespace silverorange\DevTest;
 
 use silverorange\DevTest\Template\Template;
-use silverorange\DevTest\Template\About;
+use silverorange\DevTest\Template\Checkout;
 use silverorange\DevTest\Template\NotFound;
 
 class App
@@ -42,8 +42,8 @@ class App
         // Do stuff like parse query params from $_GET here
 
         // Switch to set up different context data for different URLs.
-        if (preg_match('@^/about/?$@', $path) === 1) {
-            $context->setTitle('About');
+        if (preg_match('@^/checkout/?$@', $path) === 1) {
+            $context->setTitle('Checkout');
         }
 
         return $context;
@@ -54,8 +54,8 @@ class App
         $template = new NotFound();
 
         // Switch to load different templates for different URLs.
-        if (preg_match('@^/about/?$@', $path) === 1) {
-            $template = new About();
+        if (preg_match('@^/checkout/?$@', $path) === 1) {
+            $template = new Checkout();
         }
 
         return $template;
