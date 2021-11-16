@@ -18,9 +18,15 @@ class NotFound implements Template
     public function render(Context $context): string
     {
         $content = $this->header->render($context);
+
+        // @codingStandardsIgnoreStart
         $content .= <<<HTML
-Page Not Found
+
+<p>Page Not Found</p>
+
 HTML;
+        // @codingStandardsIgnoreEnd
+
         $content .= $this->footer->render($context);
         return $content;
     }

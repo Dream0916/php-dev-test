@@ -13,14 +13,16 @@ class Footer implements Template
     {
         $year = date('Y');
 
+        // @codingStandardsIgnoreStart
         return <<<HTML
             </div>
         </main>
-        <footer>
-            <small class="copyright">© {$year} silverorange, Inc. - All rights reserved.</small>
+        <footer class="footer">
+            <small class="copyright">© {$year} silverorange, Inc. — All rights reserved.</small>
         </footer>
     </body>
 </html>
 HTML;
+        // @codingStandardsIgnoreEnd
     }
 }

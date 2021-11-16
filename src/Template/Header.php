@@ -11,6 +11,7 @@ class Header implements Template
 {
     public function render(Context $context): string
     {
+        // @codingStandardsIgnoreStart
         return <<<HTML
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +28,9 @@ class Header implements Template
     </head>
     <body>
         <main>
+            <div class="header"></div>
             <div class="container">
 HTML;
+        // @codingStandardsIgnoreEnd
     }
 }
