@@ -7,8 +7,8 @@ use silverorange\DevTest\Template;
 
 abstract class Controller
 {
-    protected $db;
-    protected $params = [];
+    protected \PDO $db;
+    protected array $params = [];
 
     public function __construct(\PDO $db, array $params)
     {

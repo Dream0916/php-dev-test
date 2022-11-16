@@ -7,7 +7,7 @@ use silverorange\DevTest\Template;
 
 class PostIndex extends Controller
 {
-    private $posts = [];
+    private array $posts = [];
 
     public function getContext(): Context
     {

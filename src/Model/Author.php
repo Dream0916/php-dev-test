@@ -4,8 +4,8 @@ namespace silverorange\DevTest\Model;
 
 class Author
 {
-    public $id;
-    public $full_name;
-    public $created_at;
-    public $modified_at;
+    public string $id;
+    public string $full_name;
+    public string $created_at;
+    public string $modified_at;
 }

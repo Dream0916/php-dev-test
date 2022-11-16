@@ -8,7 +8,7 @@ use silverorange\DevTest\Model;
 
 class PostDetails extends Controller
 {
-    private $post = null;
+    private ?Model\Post $post = null;
 
     public function getContext(): Context
     {

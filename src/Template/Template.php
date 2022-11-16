@@ -7,7 +7,7 @@ use silverorange\DevTest\Context;
 interface Template
 {
     /**
-     * Renders a template to a tring with provided context
+     * Renders a template to a string with provided context
      *
      * @param Context $context the provided request context.
      *

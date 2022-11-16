@@ -4,7 +4,7 @@ namespace silverorange\DevTest;
 
 class App
 {
-    protected $db;
+    protected \PDO $db;
 
     public function __construct(\PDO $db)
     {

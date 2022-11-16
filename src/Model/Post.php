@@ -4,10 +4,10 @@ namespace silverorange\DevTest\Model;
 
 class Post
 {
-    public $id;
-    public $title;
-    public $body;
-    public $created_at;
-    public $modified_at;
-    public $author;
+    public string $id;
+    public string $title;
+    public string $body;
+    public string $created_at;
+    public string $modified_at;
+    public string $author;
 }

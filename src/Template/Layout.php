@@ -6,8 +6,8 @@ use silverorange\DevTest\Context;
 
 abstract class Layout implements Template
 {
-    protected $header;
-    protected $footer;
+    protected Template $header;
+    protected Template $footer;
 
     public function __construct()
     {
