@@ -4,17 +4,20 @@ namespace silverorange\DevTest\Template;
 
 use silverorange\DevTest\Context;
 
-class PostDetails extends Layout
+/**
+ * Template for the checkout page
+ */
+class Importer extends Layout
 {
     protected function renderPage(Context $context): string
     {
+        $content = $this->header->render($context);
+
         // @codingStandardsIgnoreStart
         return <<<HTML
-            <h1 style="text-align: center">$context->title</h1>
-            <div>
-            <md-block>$context->content</md-block>
-            </div>
-            <div><b>Author: $context->author</b></div>
+                    <div class="btn_div">
+                        Loading json success.
+                    </div>
 HTML;
         // @codingStandardsIgnoreEnd
     }

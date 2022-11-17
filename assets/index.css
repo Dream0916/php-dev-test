@@ -39,7 +39,7 @@ main {
 
 .container {
   margin: 0 auto;
-  max-width: 32rem;
+  max-width: 50rem;
   padding: 2rem 1rem;
 }
 
@@ -116,6 +116,7 @@ main {
   text-align: justify;
 }
 
+/*submit button style*/
 .btn {
   background-color: limegreen; /* Blue background */
   border: none; /* Remove borders */
@@ -143,4 +144,31 @@ main {
 
 .btn_div{
   text-align: center;
+}
+
+/* post list style */
+ul {
+  list-style: none;
+  font-family: 'Marck Script', cursive;
+}
+
+ul li {
+  margin-bottom: 5px;
+  border-bottom: 2px #404B51 dotted;
+  font-size: 26px;
+  line-height: 1;
+}
+
+ul li span:nth-child(odd) {
+  padding-right: 6px;
+  color: #404B51;
+}
+
+ul li span:nth-child(even) {
+  float: right;
+  padding-left: 6px;
+}
+
+ul span {
+  position: relative;
 }

@@ -18,6 +18,8 @@ class Footer implements Template
             </div>
         </main>
         <footer class="footer">
+        <!--        import module for display mark down content -->
+            <script type="module" src="https://md-block.verou.me/md-block.js"></script>
             <small class="copyright">© {$year} silverorange, Inc. — All rights reserved.</small>
         </footer>
     </body>

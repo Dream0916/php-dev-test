@@ -47,6 +47,8 @@ class App
             $controller = new Controller\PostDetails($this->db, $params);
         } elseif (preg_match('@^/checkout/?$@', $path) === 1) {
             $controller = new Controller\Checkout($this->db, []);
+        } elseif (preg_match('@^/importer/?$@', $path) === 1) {
+            $controller = new Controller\Importer($this->db, []);
         }
 
         return $controller;
