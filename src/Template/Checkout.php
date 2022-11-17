@@ -18,6 +18,10 @@ class Checkout extends Layout
                 <form method="post" accept-charset="utf-8" action="checkout" class="form" novalidate="novalidate">
                     <div class="frame">
                         <h2 class="frame__title">Order Summary</h2>
+                        <div class="frame__contents check__mark_content">
+                            <i class="fas fa-check"></i>
+                            With our “Rise & Shine” beta program, you get early access to new features, but they may not always work perfectly. You can change your beta preference at any time after you join.
+                        </div>
                         <div class="frame__contents">
                             <table class="order-summary">
                                 <thead>
@@ -29,7 +33,8 @@ class Checkout extends Layout
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Product Thumbnail</td>
+                                        <td>
+                                        <img class="image_thumb" src="/assets/product.jpg" /></td>
                                         <td>Lorem Widget</td>
                                         <td>1</td>
                                     </tr>
@@ -83,10 +88,18 @@ class Checkout extends Layout
                                 </div>
                             </div>
                             <div class="form-field form-field--required">
-                                <label class="form-field__label" for="billing_address_line1">Street Address: <span class="form-field__label-required"> (required)</span></label>
+                                <label class="form-field__label" for="billing_address_line1">Address Line1: <span class="form-field__label-required"> (required)</span></label>
                                 <div class="form-field__contents">
                                     <div class="textarea__container">
                                         <textarea name="billing_address_line1" id="billing_address_line1" class="textarea" rows="2" cols="35"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-field form-field--required">
+                                <label class="form-field__label" for="billing_address_line2">Address Line2:</label>
+                                <div class="form-field__contents">
+                                    <div class="textarea__container">
+                                        <textarea name="billing_address_line2" id="billing_address_line2" class="textarea" rows="2" cols="35"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -103,6 +116,10 @@ class Checkout extends Layout
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="btn_div">
+                        <button class="btn">
+                        <i class="fa-solid fa-cart-shopping cart-icon"></i>Place Order</button>
                     </div>
                 </form>
 HTML;

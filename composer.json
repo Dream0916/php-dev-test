@@ -11,7 +11,8 @@
     }
   ],
   "require": {
-    "php": ">=8.0.0"
+    "php": ">=8.0.0",
+    "components/font-awesome": "^6.2"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1"

@@ -111,3 +111,36 @@ main {
   border-bottom: 1px solid #eee;
   padding: 0.5rem;
 }
+
+.check__mark_content{
+  text-align: justify;
+}
+
+.btn {
+  background-color: limegreen; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  font-size: 20px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+  border-radius: 10px;
+  width:250px;
+  padding:20px;
+}
+
+.btn:hover {
+  background: #27ae60;
+}
+
+.cart-icon{
+  padding-right:inherit;
+}
+
+.image_thumb{
+  display:block;
+  width:100%;
+  height:100%;
+}
+
+.btn_div{
+  text-align: center;
+}

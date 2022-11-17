@@ -7,8 +7,8 @@ services:
       - 5532:5432
     environment:
       POSTGRES_USER: "silverorange"
-      POSTGRES_PASSWORD: "silverorange"
-      POSTGRES_DB: "silverorange"
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_DB: "root"
     volumes:
       - db-data:/var/lib/postgresql/data
 volumes:
